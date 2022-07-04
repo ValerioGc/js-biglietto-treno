@@ -21,7 +21,7 @@ if (isNaN(distance)) {
         // Biglietto sconto over
         const discount_over = Math.floor((full_price_ticket * 40) / 100)
         let full_price_ticket_over = full_price_ticket - discount_over;
-        console.log(`Il prezzo over 65 del biglietto è: ${full_price_ticket_over}€`) 
+        console.log(`Il prezzo over 65 del biglietto è: ${full_price_ticket_over}€`);
         
         //Arrotondamento prezzi
         let rounded_price_nodiscount = full_price_ticket;
@@ -29,12 +29,13 @@ if (isNaN(distance)) {
         let rounded_price_discount2 = Math.round((full_price_ticket_over * 100) / 100);
         
         // Output prezzo biglietto del treno
-        if (age >= 18 && age <= 65) {
-            alert(`Il prezzo del biglietto è di ${rounded_price_nodiscount}€`);
-        } else if (age <= 18 ) {
-            alert(`Hai diritto ad uno sconto per under 18. Il prezzo del biglietto è di ${rounded_price_discount}€`)
-        } else if (age >= 65){
+        if (age <= 18) {
+            alert(`Hai diritto ad uno sconto per under 18. Il prezzo del biglietto è di ${rounded_price_discount}€`);
+        } else if (age >= 65) {
             alert(`Hai diritto ad uno sconto per over 65. Il prezzo del biglietto è di ${rounded_price_discount2}€`);
+        }
+        else {
+            alert(`Il prezzo del biglietto è di ${rounded_price_nodiscount}€`);
         }
     }
 }
