@@ -6,7 +6,7 @@ if (isNaN(distance)) {
 } else {
     const age = prompt("Quanti Anni hai?");
     console.log(`L'utente ha ${age} anni`);
-    if (isNaN(distance)) {
+    if (isNaN(age)) {
         alert("Il valore inserito non è un numero! Per favore aggiorna la pagina ed inserisci correttamente i valori richiesti");
     } else {
         //Calcolo prezzi biglietti
